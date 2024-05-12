@@ -4,12 +4,10 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class InputController : Controller
 {
+    [SerializeField]
     private Camera _camera;
 
-    private void Awake()
-    {
-        _camera = Camera.main;
-    }
+
 
     public void OnMove(InputValue value)
     {
