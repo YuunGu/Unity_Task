@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
 
     private void Move(Vector2 direction)
     {
-        movementDirection = direction;
+        movementDirection = direction * 5;
     }
     private void ApplyMovement(Vector2 direction)
     {
