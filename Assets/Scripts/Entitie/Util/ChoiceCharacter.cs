@@ -22,5 +22,6 @@ public class ChoiceCharacter : MonoBehaviour
         Character2.SetActive(true);
         characterMenu.SetActive(false);
         name.SetActive(true);
+        Time.timeScale = 1.0f;  
     }
 }

@@ -16,5 +16,6 @@ public class Close : MonoBehaviour
     {
         gameobject.SetActive(false);
         gameobject2.SetActive(true);
+        Time.timeScale = 1.0f;
     }
 }

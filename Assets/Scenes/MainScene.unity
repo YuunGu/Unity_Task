@@ -6547,6 +6547,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameField: {fileID: 595913988}
   userName: {fileID: 136387565}
+  nameMenu: {fileID: 381985677}
+  name: {fileID: 2050605487}
 --- !u!1 &501207674
 GameObject:
   m_ObjectHideFlags: 0

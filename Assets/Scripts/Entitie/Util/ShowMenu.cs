@@ -13,5 +13,14 @@ public class ShowMenu : MonoBehaviour
     {
         gameobject.SetActive(true);
         gameobject2.SetActive(false);
+        if (gameobject.name == "Join")
+        {
+            Time.timeScale = 1.0f;
+        }
+        else
+        {
+            Time.timeScale = 0f;
+        }
+        
     }
 }
