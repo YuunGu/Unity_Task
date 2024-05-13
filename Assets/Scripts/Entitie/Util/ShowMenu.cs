@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Close : MonoBehaviour
+public class ShowMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject gameobject;
     [SerializeField]
     private GameObject gameobject2;
 
-
-
-    public void CloseBtn()
+    public void OpenBtn()
     {
-        gameobject.SetActive(false);
-        gameobject2.SetActive(true);
+        gameobject.SetActive(true);
+        gameobject2.SetActive(false);
     }
 }
