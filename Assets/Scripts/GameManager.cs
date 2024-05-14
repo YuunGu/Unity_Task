@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject charaterModel2;
     public GameObject charater;
     public GameObject NPCTalk;
+    public Text time;
 
     void Start()
     {
@@ -29,6 +31,7 @@ public class GameManager : MonoBehaviour
     
     void Update()
     {
+        time.text = DateTime.Now.ToString(("hh:mm:ss - tt"));
         if ( charater.transform.position.y >= 20)
         {
             NPCTalk.SetActive(true);
