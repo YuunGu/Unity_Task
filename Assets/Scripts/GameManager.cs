@@ -9,32 +9,25 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public string userName;
+    public static GameManager Instance;
+    public String userName;
     
-
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if (instance != this)
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
-
+        
     }
-
-    private void Update()
-    {        
-        Debug.Log(userName);
-    }
-
-
 }

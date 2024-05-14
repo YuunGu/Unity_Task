@@ -10,8 +10,10 @@ public class NameManager : MonoBehaviour
     private InputField nameField;
     [SerializeField]
     private Button button;
+    [SerializeField]
     private string userName;
     GameManager gameManager;
+
     private void Update()
     {
         userName = nameField.text;
@@ -30,13 +32,14 @@ public class NameManager : MonoBehaviour
         }
     }
 
+    
 
     public void Start()
     {
         if (button.image.color == Color.green)
         {
-            SceneManager.LoadScene("MainScene");
             gameManager.userName = userName;
+            SceneManager.LoadScene("MainScene");            
         }
     }
 }
