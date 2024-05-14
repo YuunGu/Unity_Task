@@ -1,33 +1,40 @@
-
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    public String userName;
-    
+    public Text userName;
+    public Data data;
+    public GameObject charaterModel1;
+    public GameObject charaterModel2;
+    public GameObject charater;
+    public GameObject NPCTalk;
 
-    private void Awake()
+    void Start()
     {
-        if (Instance == null)
+        if(data.charaterNumber == 0)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
+            charaterModel2.SetActive(true);
+            charaterModel1.SetActive(false);
+        }else
         {
-            Destroy(gameObject);
+            charaterModel2.SetActive(false);
+            charaterModel1.SetActive(true);
         }
+        userName.text = data.userName;
     }
 
-    private void Start()
+    
+    void Update()
     {
-        
+        if ( charater.transform.position.y >= 20)
+        {
+            NPCTalk.SetActive(true);
+        }else
+        {
+            NPCTalk.SetActive(false);
+        }
     }
 }

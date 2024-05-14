@@ -8,11 +8,17 @@ public class NameManager : MonoBehaviour
 {
     [SerializeField]
     private InputField nameField;
+
     [SerializeField]
     private Button button;
+
     [SerializeField]
-    private string userName;
-    GameManager gameManager;
+    private Data data;
+
+    [SerializeField]
+    private Image image;
+
+    public string userName = "";
 
     private void Update()
     {
@@ -25,10 +31,12 @@ public class NameManager : MonoBehaviour
         if (userName.Length <= 2 || userName.Length > 8)
         {
             button.image.color = Color.white;
+            
         }
         else
         {
             button.image.color = Color.green;
+            data.userName = userName;
         }
     }
 
@@ -38,7 +46,13 @@ public class NameManager : MonoBehaviour
     {
         if (button.image.color == Color.green)
         {
-            gameManager.userName = userName;
+            if(image.sprite.name == "necromancer_anim_f0")
+            {
+                data.charaterNumber = 0;
+            }else
+            {
+                data.charaterNumber = 1;
+            }
             SceneManager.LoadScene("MainScene");            
         }
     }
